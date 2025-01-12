@@ -16,13 +16,4 @@ public class BookController {
         return Book.books;
     }
 
-    @QueryMapping
-    public Optional<Book> bookById(@Argument Integer id) {
-        return Book.getBookById(id);
-    }
-
-    @SchemaMapping
-    public Optional<Author> author(Book book) {
-        return Author.getAuthorById(book.authorId());
-    }
 }
